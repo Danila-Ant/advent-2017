@@ -20,6 +20,7 @@ func main() {
 	)
 
 	port := os.Getenv("PORT")
+	port = "8000"
 	if port == "" {
 		log.Fatal("Port is not set.")
 	}

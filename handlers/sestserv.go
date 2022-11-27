@@ -8,7 +8,7 @@ import (
 
 func sestserv(w http.ResponseWriter, _ *http.Request) {
 
-	var resserv = "test"
+	var resserv = "test 1111"
 
 	body, err := json.Marshal(resserv)
 	if err != nil {

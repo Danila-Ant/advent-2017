@@ -1,14 +1,13 @@
 package main
 
 import (
-	"Example/hello/go/vebserv/finsimple/advent-2017/handlers"
-	"Example/hello/go/vebserv/finsimple/advent-2017/version"
-	"context"
+	"handlers"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
+	"version"
 )
 
 // How to try it: PORT=8000 go run main.go
@@ -46,19 +45,4 @@ func main() {
 	}()
 	log.Print("The service is ready to listen and serve.")
 
-	select {
-	case killSignal := <-interrupt:
-		switch killSignal {
-		case os.Interrupt:
-			log.Print("Got SIGINT...")
-		case syscall.SIGTERM:
-			log.Print("Got SIGTERM...")
-		}
-	case <-shutdown:
-		log.Printf("Got an error...")
-	}
-
-	log.Print("The service is shutting down...")
-	srv.Shutdown(context.Background())
-	log.Print("Done")
 }

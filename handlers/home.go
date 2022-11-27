@@ -30,7 +30,7 @@ func home(buildTime, commit, release string) http.HandlerFunc {
 
 func sestserv(w http.ResponseWriter, _ *http.Request) {
 
-	resserv = "test"
+	var resserv = "test"
 
 	body, err := json.Marshal(resserv)
 	if err != nil {

@@ -27,3 +27,18 @@ func home(buildTime, commit, release string) http.HandlerFunc {
 		w.Write(body)
 	}
 }
+
+func sestserv(w http.ResponseWriter, _ *http.Request) {
+
+	resserv = "test"
+
+	body, err := json.Marshal(resserv)
+	if err != nil {
+		log.Printf("error in resserv", err)
+		http.Error(w, http.StatusText(http.StatusServiceUnavailable), http.StatusServiceUnavailable)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(body)
+
+}

@@ -1,6 +1,5 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/rumyantseva/advent-2017)](https://goreportcard.com/report/github.com/rumyantseva/advent-2017)
+[![Go Report Card]()
 
-# advent-2017
+# Example-2022
 
-A set of examples for GopherAcademy Advent blog post:
-[Write a Kubernetes-ready service from zero step-by-step](https://blog.gopheracademy.com/advent-2017/kubernetes-ready-service). Russian version is [here](https://habrahabr.ru/post/345332/).
+Example of service on go

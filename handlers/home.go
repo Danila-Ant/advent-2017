@@ -10,9 +10,9 @@ import (
 func home(buildTime, commit, release string) http.HandlerFunc {
 	return func(w http.ResponseWriter, _ *http.Request) {
 		info := struct {
-			BuildTime string `json:"buildTime"`
-			Commit    string `json:"commit"`
-			Release   string `json:"release"`
+			BuildTime string `json:"buildTime1"`
+			Commit    string `json:"commit1"`
+			Release   string `json:"release1"`
 		}{
 			buildTime, commit, release,
 		}
@@ -26,19 +26,4 @@ func home(buildTime, commit, release string) http.HandlerFunc {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(body)
 	}
-}
-
-func sestserv(w http.ResponseWriter, _ *http.Request) {
-
-	var resserv = "test"
-
-	body, err := json.Marshal(resserv)
-	if err != nil {
-		log.Printf("error in resserv", err)
-		http.Error(w, http.StatusText(http.StatusServiceUnavailable), http.StatusServiceUnavailable)
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(body)
-
 }

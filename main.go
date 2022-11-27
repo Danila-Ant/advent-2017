@@ -1,21 +1,20 @@
 package main
 
 import (
+	"Example/hello/go/vebserv/finsimple/advent-2017/handlers"
+	"Example/hello/go/vebserv/finsimple/advent-2017/version"
 	"context"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
-
-	"github.com/rumyantseva/advent-2017/handlers"
-	"github.com/rumyantseva/advent-2017/version"
 )
 
 // How to try it: PORT=8000 go run main.go
 func main() {
 	log.Printf(
-		"Starting the service...\ncommit: %s, build time: %s, release: %s",
+		"1_Starting the service...\ncommit: %s, build time: %s, release: %s",
 		version.Commit, version.BuildTime, version.Release,
 	)
 

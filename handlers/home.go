@@ -10,9 +10,9 @@ import (
 func home(buildTime, commit, release string) http.HandlerFunc {
 	return func(w http.ResponseWriter, _ *http.Request) {
 		info := struct {
-			BuildTime string `json:"buildTime1"`
-			Commit    string `json:"commit1"`
-			Release   string `json:"release1"`
+			BuildTime string `json:"buildTime"`
+			Commit    string `json:"commit"`
+			Release   string `json:"release"`
 		}{
 			buildTime, commit, release,
 		}
